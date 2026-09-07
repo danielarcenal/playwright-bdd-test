@@ -1,1 +1,11 @@
 npx bddgen && npx playwright test .features-gen/tests/features/loan_application.feature.spec.js --project=chromium --headed --channel=chrome
+
+
+Git Command 
+git status
+git commit -m "Your descriptive commit message here"
+git push origin main
+
+To update repository
+git pull origin <branch-name>
+
