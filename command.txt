@@ -1,0 +1,1 @@
+npx bddgen && npx playwright test .features-gen/tests/features/loan_application.feature.spec.js --project=chromium --headed --channel=chrome
