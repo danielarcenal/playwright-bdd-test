@@ -503,3 +503,392 @@ upper()	Converts a string into upper case
 zfill()	Fills the string with a specified number of 0 values at the beginning
 
 
+
+#==============================
+Python Boolean
+
+print(10 > 9)
+print(10 == 9)
+print(10 < 9)
+
+
+#Another Example
+a = 200
+b = 33
+
+if b > a:
+  print("b is greater than a")
+else:
+  print("b is not greater than a")
+
+
+#Another Example
+x = "Hello"
+y = 15
+
+print(bool(x))
+print(bool(y))
+
+#Another Example
+print(bool("abc"))
+print(bool(123))
+print(bool(["apple", "cherry", "banana"]))
+
+
+Result:
+True
+False
+False
+b is not greater than a
+True
+True
+True
+True
+True
+
+#this print "False" or nothin
+print(bool(False))
+print(bool(None))
+print(bool(0))
+print(bool(""))
+print(bool(()))
+print(bool([]))
+print(bool({}))
+
+
+#==============================
+print("Simple Addition")
+print(10 + 5)
+
+print("Simple Addition")
+#Another Example
+sum1 = 100 + 50      # 150 (100 + 50)
+sum2 = sum1 + 250    # 400 (150 + 250)
+sum3 = sum2 + sum2   # 800 (400 + 400)
+
+print(sum1)
+print(sum2)
+print(sum3)
+
+#Another Example
+"""
++	Addition	x + y	
+-	Subtraction	x - y	
+*	Multiplication	x * y	
+/	Division	x / y	
+%	Modulus	x % y	#finding the Remainder
+**	Exponentiation	x ** y	
+//	Floor division	x // y	
+
+"""
+print("Arithmetic operations")
+x = 15
+y = 4
+
+print(x + y)
+print(x - y)
+print(x * y)
+print(x / y)
+print(x % y)
+print(x ** y)
+print(x // y)
+
+
+
+#==============================
+
+# 1. Assignment: Assigns the value 5 directly to variable x
+x = 5
+
+# 2. Addition assignment: Adds 3 to x (x becomes 8)
+x += 3  # Equivalent to: x = x + 3
+
+# 3. Subtraction assignment: Subtracts 3 from x (x becomes 5)
+x -= 3  # Equivalent to: x = x - 3
+
+# 4. Multiplication assignment: Multiplies x by 3 (x becomes 15)
+x *= 3  # Equivalent to: x = x * 3
+
+# 5. Division assignment: Divides x by 3, always returns a float (x becomes 5.0)
+x /= 3  # Equivalent to: x = x / 3
+
+# 6. Modulo assignment: Divides x by 3 and assigns the remainder (5.0 % 3 is 2.0)
+x %= 3  # Equivalent to: x = x % 3
+
+# 7. Floor division assignment: Divides x by 3 and rounds down to whole number (2.0 // 3 is 0.0)
+x //= 3  # Equivalent to: x = x // 3
+
+# 8. Exponentiation assignment: Raises x to the power of 3 (0.0 ** 3 is 0.0)
+# (Resetting x to 2 for a better example: 2 ** 3 = 8)
+x = 2
+x **= 3  # Equivalent to: x = x ** 3
+
+# 9. Bitwise AND assignment: Performs binary AND on x and 3 (Binary: 1000 & 0011 = 0000)
+x &= 3  # Equivalent to: x = x & 3
+
+# 10. Bitwise OR assignment: Performs binary OR on x and 3 (Binary: 0000 | 0011 = 0011)
+x |= 3  # Equivalent to: x = x | 3
+
+# 11. Bitwise XOR assignment: Performs binary XOR on x and 3 (Binary: 0011 ^ 0011 = 0000)
+x ^= 3  # Equivalent to: x = x ^ 3
+
+# 12. Bitwise right shift assignment: Shifts x's binary bits 3 places to the right
+# (Resetting x to 8 for a better example: 1000 shifted right by 3 is 0001)
+x = 8
+x >>= 3  # Equivalent to: x = x >> 3
+
+# 13. Bitwise left shift assignment: Shifts x's binary bits 3 places to the left (1 shifted left by 3 is 8)
+x <<= 3  # Equivalent to: x = x << 3
+
+# 14. Walrus operator (Assignment Expression): Assigns 3 to x AND immediately returns the value
+# to be used inside another expression (like print, an if-statement, or a loop)
+print(x := 3)  # Assigns x = 3, then prints 3
+
+
+#==============================
+num = 6
+
+x = "WEEKEND!" if num > 5 else "Workday"
+
+print(x)
+
+
+Result:
+WEEKEND!
+
+#============================== 
+num = 6
+
+x = "Fri" if num == 5 else "Sat" if num == 6 else "Sun" if num == 7 else "weekday"
+
+print(x)
+
+Result: 
+Sat
+#============================== 
+Operators
+x = 5
+y = 3
+
+print(x == y)
+print(x != y)
+print(x > y)
+print(x < y)
+print(x >= y)
+print(x <= y)
+
+Result:
+False
+True
+True
+False
+True
+False
+
+#============================== 
+Another Example
+x = 5
+
+print(1 < x < 10)
+
+print(1 < x and x < 10)
+
+
+Result:
+True
+True
+
+#============================== 
+Another Example
+x = 5
+
+print(x > 0 and x < 10)
+print(x < 5 or x > 10)
+print(not(x > 3 and x < 10))
+
+Result:
+True
+False
+False
+
+#============================== 
+Another Example
+x = ["apple", "banana"]
+y = ["apple", "banana"]
+z = x
+
+print(x is z)
+print(x is y)
+print(x == y)
+
+Result:
+True
+False
+True
+
+
+#============================== 
+Another Example
+x = ["apple", "banana"]
+y = ["apple", "banana"]
+
+print(x is not y)
+
+Result:
+True
+
+#============================== 
+x = [1, 2, 3]
+y = [1, 2, 3]
+
+print(x == y)
+print(x is y)
+
+Result:
+True
+False
+
+#============================== 
+Another Example
+fruits = ["apple", "banana", "cherry"]
+
+print("banana" in fruits)
+print("pineapple" in fruits)
+print("pineapple" not in fruits)
+
+Result:
+True
+False
+True
+
+#============================== 
+
+x = 5  # Binary: 0101
+y = 3  # Binary: 0011
+
+# 1. Bitwise AND (&): Compares each bit; sets to 1 only if BOTH bits are 1
+# 0101 & 0011 = 0001 (Decimal: 1)
+result_and = x & y
+
+# 2. Bitwise OR (|): Compares each bit; sets to 1 if AT LEAST ONE of the bits is 1
+# 0101 | 0011 = 0111 (Decimal: 7)
+result_or = x | y
+
+# 3. Bitwise XOR (^): Compares each bit; sets to 1 if ONLY ONE of the bits is 1 (not both)
+# 0101 ^ 0011 = 0110 (Decimal: 6)
+result_xor = x ^ y
+
+# 4. Bitwise NOT (~): Inverts all bits (1 becomes 0, 0 becomes 1). 
+# Due to how computers store negative numbers (Two's Complement), it effectively returns -(x + 1)
+# ~0101 becomes ...11111010 (Decimal: -6)
+result_not = ~x
+
+# 5. Zero fill left shift (<<): Shifts bits to the left by 2 spaces, pushing zeros in from the right
+# 0101 shifted left by 2 becomes 010100 (Decimal: 20)
+# (Shortcut: Effectively multiplies the number by 2 for each shift)
+result_left = x << 2
+
+# 6. Signed right shift (>>): Shifts bits to the right by 2 spaces, discarding bits on the right
+# 0101 shifted right by 2 becomes 0001 (Decimal: 1)
+# (Shortcut: Effectively performs floor division by 2 for each shift)
+result_right = x >> 2
+
+
+#============================== 
+
+# 1. Parentheses () - Forces addition before multiplication
+print((100 + 5) * 3)  # 105 * 3 -> 315
+
+# 2. Exponentiation ** - Power happens before addition
+print(100 + 2 ** 3)  # 100 + 8 -> 108
+
+# 3. Unary operators (-x) - Negative sign applies before addition
+print(100 + -5)  # 100 - 5 -> 95
+
+# 4. Multiplication/Division/Modulo (*, /, //, %) - Multiplication happens first
+print(100 + 5 * 3)  # 100 + 15 -> 115
+
+# 5. Addition/Subtraction (+, -) - Evaluates left-to-right
+print(100 - 5 + 3)  # 95 + 3 -> 98
+
+# 6. Bitwise Shifts (<<, >>) - Addition happens before shifting bits
+print(1 + 1 << 2)  # 2 << 2 -> 8
+
+# 7. Bitwise AND (&) - Addition happens before bitwise AND
+print(7 & 2 + 1)  # 7 & 3 -> 3
+
+# 8. Bitwise XOR (^) - Bitwise AND happens before bitwise XOR
+print(5 ^ 4 & 3)  # 5 ^ 0 -> 5
+
+# 9. Bitwise OR (|) - Bitwise XOR happens before bitwise OR
+print(1 | 4 ^ 4)  # 1 | 0 -> 1
+
+# 10. Comparisons (==, !=, etc.) - Addition happens before comparison
+print(100 + 5 == 105)  # 105 == 105 -> True
+
+# 11. Logical NOT (not) - Comparison happens before 'not'
+print(not 100 > 200)  # not False -> True
+
+# 12. Logical AND (and) - 'and' happens before 'or'
+print(True or True and False)  # True or False -> True
+
+# 13. Logical OR (or) - Evaluated last in the expression
+print(False or True)  # True
+
+#============================== 
+List
+
+thislist = ["apple", "banana", "cherry"]
+print(len(thislist))
+
+Result:
+3
+
+Another Example
+list1 = ["apple", "banana", "cherry"]
+list2 = [1, 5, 7, 9, 3]
+list3 = [True, False, False]
+
+print(list1)
+print(list2)
+print(list3)
+
+Result:
+['apple', 'banana', 'cherry']
+[1, 5, 7, 9, 3]
+[True, False, False]
+
+
+Another Example
+list1 = ["abc", 34, True, 40, "male"]
+
+print(list1)
+
+Result:
+['abc', 34, True, 40, 'male']
+
+Another Example:
+mylist = ["apple", "banana", "cherry"]
+
+print(type(mylist))
+
+Result:
+<class 'list'>
+
+Same Version with the previous Example using the list()
+thislist = list(("apple", "banana", "cherry"))
+print(thislist)
+
+Result:
+['apple', 'banana', 'cherry']
+
+
+***Python Collections (Arrays)***
+There are four collection data types in the Python programming language:
+
+List is a collection which is ordered and changeable. Allows duplicate members.
+Tuple is a collection which is ordered and unchangeable. Allows duplicate members.
+Set is a collection which is unordered, unchangeable*, and unindexed. No duplicate members.
+Dictionary is a collection which is ordered** and changeable. No duplicate members.
+
+#============================== 
