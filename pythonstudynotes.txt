@@ -892,3 +892,547 @@ Set is a collection which is unordered, unchangeable*, and unindexed. No duplica
 Dictionary is a collection which is ordered** and changeable. No duplicate members.
 
 #============================== 
+Access List Items
+
+thislist = ["apple", "banana", "cherry"]
+thislist2 = ["apple", "banana", "cherry", "orange", "kiwi", "melon", "mango"]
+
+#Simple Access
+print(thislist[1])
+
+#Simple Access with negative. Starts in the end of the list
+print(thislist[-1])
+
+#With Range
+print(thislist2[2:5])
+print(thislist2[:4])
+print(thislist2[2:])
+print(thislist2[-4:-1])
+
+#Conditional
+if "apple" in thislist2:
+  print("Yes, 'apple' is in the fruits list")
+
+Result:
+banana
+cherry
+['cherry', 'orange', 'kiwi']
+['apple', 'banana', 'cherry', 'orange']
+['cherry', 'orange', 'kiwi', 'melon', 'mango']
+['orange', 'kiwi', 'melon']
+Yes, 'apple' is in the fruits list
+
+#============================== 
+Change List Items
+
+Another Example:
+
+thislist = ["apple", "banana", "cherry"]
+thislist[1] = "blackcurrant"
+
+print(thislist)
+
+
+Result:
+['apple', 'blackcurrant', 'cherry']
+
+
+Another Example
+#Inserting with range
+thislist = ["apple", "banana", "cherry", "orange", "kiwi", "mango"]
+
+thislist[1:3] = ["blackcurrant", "watermelon"]
+
+print(thislist)
+
+Result:
+['apple', 'blackcurrant', 'watermelon', 'orange', 'kiwi', 'mango']
+
+
+Another Example:
+#Inserting with range
+thislist = ["apple", "banana", "cherry"]
+
+thislist[1:2] = ["blackcurrant", "watermelon"]
+
+print(thislist)
+
+Result:
+['apple', 'blackcurrant', 'watermelon', 'cherry']
+
+Another Example:
+thislist = ["apple", "banana", "cherry"]
+
+thislist[1:3] = ["watermelon"]
+
+print(thislist)
+
+
+Result:
+['apple', 'watermelon']
+
+
+Another Example:
+#Inserting list with a specific number
+thislist = ["apple", "banana", "cherry"]
+
+thislist.insert(2, "watermelon")
+
+print(thislist) 
+
+Result:
+['apple', 'banana', 'watermelon', 'cherry']
+
+
+
+#==============================
+Inserting Item in the list
+
+Example
+thislist = ["apple", "banana", "cherry"]
+
+thislist.append("orange")
+
+print(thislist)
+
+Result:
+['apple', 'banana', 'cherry', 'orange']
+
+#Another Example
+thislist = ["apple", "banana", "cherry"]
+thislist.insert(1, "orange")
+print(thislist)
+
+
+Result:
+['apple', 'orange', 'banana', 'cherry']
+
+#Another Example
+#Inserting another List
+thislist = ["apple", "banana", "cherry"]
+tropical = ["mango", "pineapple", "papaya"]
+
+thislist.extend(tropical)
+
+print(thislist)
+  
+Result:
+['apple', 'banana', 'cherry', 'mango', 'pineapple', 'papaya']
+
+
+#==============================
+Removing the list
+
+Example:
+thislist = ["apple", "banana", "cherry"]
+thislist.remove("banana")
+print(thislist)
+
+Result:
+['apple', 'cherry']
+
+#Another Example
+thislist = ["apple", "banana", "cherry", "banana", "kiwi"]
+thislist.remove("banana")
+print(thislist)
+
+Result:
+['apple', 'cherry', 'banana', 'kiwi']
+
+
+#Another Example
+#Removing Item in the List with pop()
+
+thislist = ["apple", "banana", "cherry"]
+thislist.pop(1)
+print(thislist)
+
+Result:
+['apple', 'cherry']
+
+#Another Example
+#using pop without specific number removes the last item
+thislist = ["apple", "banana", "cherry"]
+thislist.pop()
+print(thislist)
+
+Result:
+['apple', 'banana']
+
+
+#Another Example
+#Deleting a list with specific index
+thislist = ["apple", "banana", "cherry"]
+del thislist[0]
+print(thislist)
+
+Result:
+['banana', 'cherry']
+
+
+#Another Example
+#You can also delete the list also with the keyword del
+thislist = ["apple", "banana", "cherry"]
+del thislist
+
+#Another Example
+#clearing inside the list
+thislist = ["apple", "banana", "cherry"]
+thislist.clear()
+print(thislist)
+
+
+Result:
+[]
+
+
+#==============================
+Looping in list
+
+#Example
+thislist = ["apple", "banana", "cherry"]
+for x in thislist:
+  print(x)
+
+Result:
+apple
+banana
+cherry
+
+
+#Another Example
+thislist = ["apple", "banana", "cherry"]
+for i in range(len(thislist)):
+  print(thislist[i])
+
+Result:
+apple
+banana
+cherry
+
+
+#Another Example: using While Loop
+thislist = ["apple", "banana", "cherry"]
+i = 0
+while i < len(thislist):
+  print(thislist[i])
+  i = i + 1
+
+
+Result:
+apple
+banana
+cherry
+
+
+#Another Example Using List Comprehension
+thislist = ["apple", "banana", "cherry"]
+[print(x) for x in thislist]
+
+Result:
+apple
+banana
+cherry
+
+#==============================
+
+List Comprehension
+List comprehension offers a shorter syntax instead using for
+
+
+From this
+fruits = ["apple", "banana", "cherry", "kiwi", "mango"]
+newlist = []
+
+for x in fruits:
+  if "a" in x:
+    newlist.append(x)
+
+print(newlist)
+
+
+To This
+Format:
+newlist = [expression for item in iterable if condition == True]
+
+fruits = ["apple", "banana", "cherry", "kiwi", "mango"]
+newlist = [x for x in fruits if "a" in x]
+
+print(newlist)
+
+
+Result:
+['apple', 'banana', 'mango']
+
+
+#another Example
+fruits = ["apple", "banana", "cherry", "kiwi", "mango"]
+
+newlist = [x for x in fruits if x != "apple"]
+
+print(newlist)
+
+
+Result:
+['banana', 'cherry', 'kiwi', 'mango']
+
+
+#Another Example
+fruits = ["apple", "banana", "cherry", "kiwi", "mango"]
+
+newlist = [x for x in fruits]
+
+print(newlist)
+
+
+#Another Example
+newlist = [x for x in range(10)]
+
+print(newlist)
+
+
+Result:
+[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+
+#Another Example
+newlist = [x for x in range(10) if x < 5]
+
+print(newlist)
+
+
+Result:
+[0, 1, 2, 3, 4]
+
+#Another Example
+fruits = ["apple", "banana", "cherry", "kiwi", "mango"]
+
+newlist = [x.upper() for x in fruits]
+
+print(newlist)
+
+
+Result:
+['APPLE', 'BANANA', 'CHERRY', 'KIWI', 'MANGO']
+
+
+#Another Example
+fruits = ["apple", "banana", "cherry", "kiwi", "mango"]
+
+newlist = ['hello' for x in fruits]
+
+print(newlist)
+
+
+Result:
+['hello', 'hello', 'hello', 'hello', 'hello']
+
+
+#Another Example
+fruits = ["apple", "banana", "cherry", "kiwi", "mango"]
+
+newlist = [x if x != "banana" else "orange" for x in fruits]
+
+print(newlist)
+
+
+Result:
+['apple', 'orange', 'cherry', 'kiwi', 'mango']
+
+
+
+
+#==============================
+Sorting
+It would automatically sort in ascending order when you use only sort()
+
+Example:
+thislist = ["orange", "mango", "kiwi", "pineapple", "banana"]
+
+thislist.sort()
+
+print(thislist)
+
+
+Result:
+['banana', 'kiwi', 'mango', 'orange', 'pineapple']
+
+
+#Another Example
+thislist = [100, 50, 65, 82, 23]
+
+thislist.sort()
+
+print(thislist)
+
+Result
+[23, 50, 65, 82, 100]
+
+
+#Another Example: if you want it to be reverse, you will do this 
+
+thislist = ["orange", "mango", "kiwi", "pineapple", "banana"]
+
+thislist.sort(reverse = True)
+
+print(thislist)
+
+Result:
+['pineapple', 'orange', 'mango', 'kiwi', 'banana']
+
+
+
+Introducing "key"
+Key is a parameter where you can insert a rule to the list
+
+#another example
+def myfunc(n):
+  return abs(n - 50)
+
+thislist = [100, 50, 65, 82, 23]
+
+thislist.sort(key = myfunc)
+
+print(thislist)
+
+Result:
+[50, 65, 23, 82, 100]
+
+
+#Another Example: Sort is case sensitive, so capitalize letters would be sorted first then after lower case
+thislist = ["banana", "Orange", "Kiwi", "cherry"]
+
+thislist.sort()
+
+print(thislist)
+
+
+Result:
+['Kiwi', 'Orange', 'banana', 'cherry']
+
+
+#Another Example: you can use it like this, this would make the capitalize to be in lower case
+thislist = ["banana", "Orange", "Kiwi", "cherry"]
+
+thislist.sort(key = str.lower) #best example of key parameter
+
+print(thislist)
+
+Result:
+['banana', 'cherry', 'Kiwi', 'Orange']
+
+
+REVERSE sort
+#example
+thislist = ["banana", "Orange", "Kiwi", "cherry"]
+
+thislist.reverse()
+
+print(thislist) 
+
+
+Result:
+['cherry', 'Kiwi', 'Orange', 'banana']
+
+#=============================
+
+Copying list
+You can do three methods to copy a list
+
+***Use the copy() method
+You can use the built-in List method copy() to copy a list.
+
+Example
+thislist = ["apple", "banana", "cherry"]
+mylist = thislist.copy()
+print(mylist)
+
+
+Result:
+['apple', 'banana', 'cherry']
+
+
+***Use the list() method
+Another way to make a copy is to use the built-in method list().
+
+thislist = ["apple", "banana", "cherry"]
+mylist = list(thislist)
+print(mylist)
+
+
+Result:
+['apple', 'banana', 'cherry']
+
+
+***Use the slice Operator
+You can also make a copy of a list by using the : (slice) operator.
+
+thislist = ["apple", "banana", "cherry"]
+mylist = thislist[:]
+print(mylist)
+
+Result:
+['apple', 'banana', 'cherry']
+
+
+#=============================
+
+Joining List
+
+Simple adding + 
+#Example
+list1 = ["a", "b", "c"]
+list2 = [1, 2, 3]
+
+list3 = list1 + list2
+print(list3)
+
+
+Result:
+['a', 'b', 'c', 1, 2, 3]
+
+
+*** You can try appending
+appending all the items from list2 into list1, one by one:
+
+#example
+list1 = ["a", "b" , "c"]
+list2 = [1, 2, 3]
+
+for x in list2:
+  list1.append(x)
+
+print(list1)
+
+
+Result:
+['a', 'b', 'c', 1, 2, 3]
+
+***Or you can use the extend() method, 
+
+list1 = ["a", "b" , "c"]
+list2 = [1, 2, 3]
+
+list1.extend(list2)
+print(list1)
+
+Result:
+['a', 'b', 'c', 1, 2, 3]
+
+
+#=============================
+
+
+List Methods
+Method	Description
+append()	Adds an element at the end of the list
+clear()	Removes all the elements from the list
+copy()	Returns a copy of the list
+count()	Returns the number of elements with the specified value
+extend()	Add the elements of a list (or any iterable), to the end of the current list
+index()	Returns the index of the first element with the specified value
+insert()	Adds an element at the specified position
+pop()	Removes the element at the specified position
+remove()	Removes the item with the specified value
+reverse()	Reverses the order of the list
+sort()	Sorts the list
