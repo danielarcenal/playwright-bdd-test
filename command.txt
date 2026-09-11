@@ -8,4 +8,4 @@ git push origin main
 
 To update repository
 git pull origin <branch-name>
-
+npx bddgen && npx playwright test .features-gen/tests/features/loan_application.feature.spec.js --project=chromium --headed --channel=chrome
